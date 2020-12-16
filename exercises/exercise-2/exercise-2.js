@@ -9,3 +9,30 @@ let hogwarts = [
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
+
+// Task 1
+
+function findGriffindor(arr) {
+	for (i of arr) {
+		const {firstName, lastName, house } = i;
+		if (house === "Gryffindor") {
+			console.log(firstName, lastName);
+		}
+	}
+}
+
+findGriffindor(hogwarts);
+
+// Task 2
+console.log();
+
+function findPets(arr) {
+	for (i of arr) {
+		const {firstName, lastName, pet} = i;
+		if (pet) {
+			console.log(firstName, lastName);
+		}
+	}
+}
+
+findPets(hogwarts);
