@@ -7,3 +7,23 @@
      { itemName: "Hash Brown", quantity: 4, unitPrice: 0.40}
  ]
  
+ function orderInvoice(arr) {
+	 let total = 0;
+	 let result = [];
+	 for (i of arr) {
+		 const {itemName, quantity, unitPrice} = i;
+		 const price = unitPrice * quantity;
+		 total += price;
+		 const res = {
+			 QTY: quantity,
+			 ITEM: itemName,
+			 TOTAL: price.toFixed(2)
+		 }
+		 result.push(res);
+	 }
+	 console.table(result, ["QTY", "ITEM", "TOTAL"]);
+	 console.log();
+	 console.log(`Total: ${total}`);
+ }
+
+ orderInvoice(order);
