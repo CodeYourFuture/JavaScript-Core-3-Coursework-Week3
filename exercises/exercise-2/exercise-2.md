@@ -20,7 +20,7 @@ For each character you have the following information:
 
 ```
 Harry Potter
-Ron Weasley
+Ron Weasley  < - doesn't exist in array
 Hermione Granger
 Minerva McGonagall
 Albus Dumbledore
