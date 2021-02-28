@@ -9,3 +9,25 @@ let hogwarts = [
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
+
+const { firstName, lastName, house, pet, occupation } = hogwarts;
+
+function isGryffindor(obj){
+    obj.forEach((name) => {
+      if (name.house === "Gryffindor") {
+        console.log(name.firstName, name.lastName);
+      }
+    });
+}
+
+isGryffindor(hogwarts);
+
+function teachersWithPets(obj) {
+  obj.forEach((name) => {
+    if (name.occupation === "Teacher" && name.pet !== null) {
+      console.log(name.firstName, name.lastName);
+    }
+  });
+}
+
+teachersWithPets(hogwarts);
