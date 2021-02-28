@@ -24,6 +24,6 @@
      result.push(temp);
    });
    console.table(result, ["QTY", "ITEM", "TOTAL"]);
-   console.log(`Total: ${total}`);
+   console.log(`\nTotal: ${total}`);
  }
  orderReceipt(order);
