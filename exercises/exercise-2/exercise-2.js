@@ -12,6 +12,7 @@ let hogwarts = [
 
 const { firstName, lastName, house, pet, occupation } = hogwarts;
 
+console.log(`\n******* Names of the people who belong to the Gryffindor house ******`)
 function isGryffindor(obj){
     obj.forEach((name) => {
       if (name.house === "Gryffindor") {
@@ -22,6 +23,7 @@ function isGryffindor(obj){
 
 isGryffindor(hogwarts);
 
+console.log(`\n******* Name(s) of teachers who have pets. ******`)
 function teachersWithPets(obj) {
   obj.forEach((name) => {
     if (name.occupation === "Teacher" && name.pet !== null) {
