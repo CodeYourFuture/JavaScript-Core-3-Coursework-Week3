@@ -37,6 +37,8 @@ console.log(y)
 
 What will be the output of this code. Explain your answer in 50 words or less.
 
+It will log x as 10 as x is global thereby running the console.log in the function f1. However, the console.log(f1()) will be undefined while console.log(y) will throw refferenceError because y is in the local scope of function f1.
+
 ## Question 3
 
 Take a look at the following code:
@@ -64,3 +66,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+The function f1 will return 9 because x is a constant and cannot be changed.
+And the function f2 will return x = 10 because object property can be modified.
