@@ -7,3 +7,23 @@
      { itemName: "Hash Brown", quantity: 4, unitPrice: 0.40}
  ]
  
+ const {itemName, quantity, unitPrice} = order;
+
+ function orderReceipt(obj) {
+   let total = 0;
+   let result = [];
+   obj.forEach((el) => {
+     const price = el.unitPrice * el.quantity;
+     total += price;
+
+     const temp = {
+       QTY: el.quantity,
+       ITEM: el.itemName,
+       TOTAL: price.toFixed(2),
+     };
+     result.push(temp);
+   });
+   console.table(result, ["QTY", "ITEM", "TOTAL"]);
+   console.log(`Total: ${total}`);
+ }
+ orderReceipt(order);
