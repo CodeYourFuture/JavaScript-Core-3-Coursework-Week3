@@ -16,6 +16,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+Because line 4 is global while line 6 is local to the function f1
+
 ## Question 2
 
 Take a look at the following code:
