@@ -72,10 +72,10 @@ let hogwarts = [
 ];
 
 // Task 1 Solution
-const houseOfGryffindor = (character) => {
-  if (character) {
+const houseOfGryffindor = ({firstName,lastName}) => {
+  if (!undefined) {
     // if character is not undefined
-    return `${character.firstName} ${character.lastName}`;
+    return `${firstName} ${lastName}`;
   }
 };
 
@@ -85,8 +85,8 @@ const [Harry, Ron, Hermione, , , , , , Minerva, Albus] = hogwarts;
 );
 
 // Task 2 Solution
-const charactersWithPets = ([Albus, ...rest]) => {
-  console.log(`\n${Albus.firstName} ${Albus.lastName}`);
+const charactersWithPets = ([{ firstName, lastName }]) => {
+  console.log(`\n${firstName} ${lastName}`);
 };
 
 charactersWithPets(hogwarts.reverse()); // Albus Dumbledore (the last item) now becomes the first in the list
