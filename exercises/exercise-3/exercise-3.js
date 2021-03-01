@@ -6,13 +6,17 @@ let order = [
   {itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0},
   {itemName: "Hash Brown", quantity: 4, unitPrice: 0.4},
 ];
-
+// console.table(order);
 let [item1, item2, item3, item4, item5, item6] = order;
 let items = [item1, item2, item3, item4, item5, item6];
-let total = 0;
+let sum = 0;
 
-console.table(items);
+console.log(` QTY \t\t ITEM \t\t TOTAL`);
 items.forEach((item) => {
-  total = total + item.unitPrice * item.quantity;
+  let qty = item.quantity;
+  let currentItem = item.itemName;
+  let total = (item.unitPrice * item.quantity).toFixed(2);
+  sum = sum + item.unitPrice * item.quantity;
+  console.log(` ${qty} \t\t ${currentItem} \t ${total}`);
 });
-console.log(`Total: ${total}`);
+console.log(`\n Total: ${sum}`);
