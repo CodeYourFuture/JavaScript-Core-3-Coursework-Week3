@@ -9,3 +9,30 @@ let hogwarts = [
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
+
+let [firstName,lastName,house , pet, occupation] = hogwarts;
+
+function houses(search){
+
+search.forEach((n)=>{
+    if( n.house === "Gryffindor")
+    {console.log(n.firstName, n.lastName)};
+    
+});
+
+};
+
+
+function teacher(search){
+
+    search.forEach((n)=>{
+        if( n.occupation === "Teacher" && n.pet != null)
+        {console.log(n.firstName, n.lastName)};
+        
+    });
+    
+    };
+
+
+
+teacher(hogwarts);
