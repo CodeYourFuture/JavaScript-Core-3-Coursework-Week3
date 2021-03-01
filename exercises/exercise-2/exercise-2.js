@@ -9,3 +9,8 @@ let hogwarts = [
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
+
+let [firstName, lastName] = hogwarts;
+let result = hogwarts.forEach(person => `${person.firstName} ${person.lastName}`);
+console.log(result);
+
