@@ -9,17 +9,13 @@ let order = [
 
 // Solution
 let total = 0;
-const itemInfo = ({name,qty,unitPrice}) => {
-  total += qty * unitPrice;
-  return `${qty.toString().padEnd(10, " ")}${name.padEnd(
-    20,
-    " "
-  )}${(qty * unitPrice).toFixed(2)}`;
+const itemInfo = ({ itemName, quantity, unitPrice }) => {
+  total += quantity * unitPrice;
+  return `${quantity.toString().padEnd(10, " ")}${itemName.padEnd(20, " ")}${(
+    quantity * unitPrice
+  ).toFixed(2)}`;
 };
 
 console.log(`${"Qty".padEnd(10, " ")}${"Item".padEnd(20, " ")}Total`);
-order.forEach((item) => {
-    item = { name: item.itemName, qty: item.quantity, unitPrice: item.unitPrice };
-    console.log(itemInfo(item));
-});
+order.forEach((item) => console.log(itemInfo(item)));
 console.log(`\nTotal: ${total}`);
