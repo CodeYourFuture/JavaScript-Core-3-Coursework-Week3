@@ -9,3 +9,13 @@ let hogwarts = [
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
+//let [Harry, Hermione, Draco, Cedric, Severus, Filius, Pomona, Minerva, Albus] = hogwarts;
+
+
+let peopleBelongToGryffindorHouse = hogwarts.filter(elem => {
+    return elem.house === "Gryffindor"
+}).forEach(elem => {
+    console.log(`${elem.firstName} ${elem.lastName}`);
+})
+
+
