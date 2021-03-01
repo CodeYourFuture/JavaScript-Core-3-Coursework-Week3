@@ -6,7 +6,7 @@ Take a look at the following code:
 
 ```
 1    let x = 1;
-2    function f1() 
+2    function f1()
 3    {
 4        let x = 2;
 5        console.log(x);
@@ -15,6 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+The redefined x in the function will then be forgotton and it will return let x from line 1.
 
 ## Question 2
 
@@ -34,6 +35,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+x =10 because it is a global function. console.log(y) will throw an error because it is not globally defined.
 
 ## Question 3
 
@@ -62,3 +65,4 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+9 and 10. x is a const so won't change and the second function is an object so can be changed.
