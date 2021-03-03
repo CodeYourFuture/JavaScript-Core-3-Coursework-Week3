@@ -6,7 +6,7 @@ Take a look at the following code:
 
 ```
 1    let x = 1;
-2    function f1() 
+2    function f1()
 3    {
 4        let x = 2;
 5        console.log(x);
