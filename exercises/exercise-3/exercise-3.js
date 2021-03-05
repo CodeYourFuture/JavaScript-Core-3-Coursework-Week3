@@ -6,4 +6,25 @@
      { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.00},
      { itemName: "Hash Brown", quantity: 4, unitPrice: 0.40}
  ]
+
+ let {itemName, quantity, unitPrice} = order;
+ let total = 0;
+ let receipt = [];
+
+ function orderedReceipt(obj) {
+     obj.forEach(item => {
+         let price = item.unitPrice * item.quantity;
+         total += price;
+
+         let result = {
+             QTY: item.quantity,
+             ITEM: item.itemName,
+             TOTAL: price.toFixed(2)
+         };
+         receipt.push(result);
+     });
+     console.table(receipt, ['QTY', 'ITEM', 'TOTAL']);
+     console.log(`Total: ${total}`);
+ }
+ orderedReceipt(order);
  

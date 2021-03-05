@@ -9,3 +9,24 @@ let hogwarts = [
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
+// Task one
+let {firstName, lastName, house, pet, occupation} = hogwarts;
+
+function belongsToGryffindor(obj) {
+    obj.forEach(name => {
+        if (name.house === 'Gryffindor') {
+            console.log(name.firstName, name.lastName);
+        }
+    })
+}
+belongsToGryffindor(hogwarts);
+
+// Task two
+function teachersOwnPets(obj) {
+    obj.forEach(name => {
+        if (name.occupation === 'Teacher' && name.per !== null) {
+            console.log(name.firstName, name.lastName);
+        }
+    })
+}
+teachersOwnPets(hogwarts);
