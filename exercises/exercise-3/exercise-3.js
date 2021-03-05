@@ -6,4 +6,14 @@
      { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.00},
      { itemName: "Hash Brown", quantity: 4, unitPrice: 0.40}
  ]
- 
+
+ let total = 0;
+ console.log(`Qty  item   Total`);
+ order.map((item) =>{
+     const {itemName, quantity, unitPrice} = item;
+     console.log(`${quantity} ${itemName}  ${unitPrice}`);
+
+     total = total + unitPrice ;
+ });
+
+ console.log(`Total: ${total}`);
