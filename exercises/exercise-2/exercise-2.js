@@ -64,10 +64,31 @@ let hogwarts = [
   },
 ];
 
-// let [firstPerson, secondPerson, thirdPerson, fourthPerson, fifthPerson, sixthPerson, seventhPerson, eighthPerson, ninthPerson] = hogwarts;
-// let people = [firstPerson, secondPerson, thirdPerson, fourthPerson, fifthPerson, sixthPerson, seventhPerson, eighthPerson, ninthPerson];
-let [firstPerson, secondPerson, ...restOfPeople] = hogwarts;
-let people = [firstPerson, secondPerson, ...restOfThePeople];
+// let [firstPerson, secondPerson, ...restOfPeople] = hogwarts;
+// let people = [firstPerson, secondPerson, ...restOfThePeople];
+
+let [
+  firstPerson,
+  secondPerson,
+  thirdPerson,
+  fourthPerson,
+  fifthPerson,
+  sixthPerson,
+  seventhPerson,
+  eighthPerson,
+  ninthPerson,
+] = hogwarts;
+let people = [
+  firstPerson,
+  secondPerson,
+  thirdPerson,
+  fourthPerson,
+  fifthPerson,
+  sixthPerson,
+  seventhPerson,
+  eighthPerson,
+  ninthPerson,
+];
 
 //Task 1
 people.forEach((person) => {
