@@ -8,9 +8,21 @@ let hogwarts = [
     { firstName: "Pomona", lastName: "Sprout", house: "Hufflepuff", pet: null, occupation: "Teacher" },
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
-]
+];
 
-let [firstName, lastName] = hogwarts;
-let result = hogwarts.forEach(person => `${person.firstName} ${person.lastName}`);
-console.log(result);
+//for(let i = 0; i < hogwarts.length; i++) {
+    //if(hogwarts[i].house === "Gryffindor") {
+    //console.log(hogwarts[i].firstName + " " + hogwarts[i].lastName);
+//}
+//}
 
+for(let i = 0; i < hogwarts.length; i++) {
+    
+    if(hogwarts[i].house === "Gryffindor") {
+        let firstName = hogwarts[i].firstName;
+        let lastName = hogwarts[i].lastName;
+        
+        console.log(`${firstName} ${lastName}`);
+    }
+
+}
