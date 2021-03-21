@@ -75,3 +75,14 @@ function gryffindor(set) {
 }
 
 gryffindor(hogwarts);
+
+// ----------------------------------------------------------------
+
+function withPets(set) {
+  set.forEach((name) => {
+    if (name.occupation === "Teacher" && name.pet !== null) {
+      console.log(name.firstName, name.lastName);
+    }
+  });
+}
+withPets(hogwarts);
