@@ -78,11 +78,9 @@ for (const { firstName, lastName, house } of hogwarts) {
   }
 }
 
-console.log();
-
 // TASK 2
 for (const { firstName, lastName, pet, occupation } of hogwarts) {
   if (occupation === "Teacher" && typeof pet === "string") {
-    console.log(`Teacher ${firstName} ${lastName} has a ${pet}`);
+    console.log(`${occupation} ${firstName} ${lastName} has a ${pet}`);
   }
 }
