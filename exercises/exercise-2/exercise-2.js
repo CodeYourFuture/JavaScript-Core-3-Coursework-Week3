@@ -10,3 +10,35 @@ let hogwarts = [
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
+
+//* Task - 1
+function peopleOfGryffindor(hogwarts) {
+    let count = 1;
+    console.log("Names of the people who belong to the Gryffindor house:")
+    hogwarts.forEach(item => {
+        let { firstName, lastName, house } = item;
+        if (house === "Gryffindor") {
+            console.log(`${count}: ${firstName} ${lastName}`);
+            count++;
+        }
+    })
+}
+
+peopleOfGryffindor(hogwarts);
+
+console.log("------------------")
+
+//* Task - 2
+function teachersWithPets(hogwarts) {
+    let count = 1;
+    console.log("Names of teachers who have pets:")
+    hogwarts.forEach(item => {
+        let { firstName, lastName, pet, occupation } = item;
+        if (occupation === "Teacher" && pet !== null) {
+            console.log(`${count}: ${firstName} ${lastName}`);
+            count++;
+        }
+    })
+}
+
+teachersWithPets(hogwarts);
