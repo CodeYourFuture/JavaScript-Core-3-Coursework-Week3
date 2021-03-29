@@ -9,7 +9,7 @@ For each character you have the following information:
 - Last Name
 - School House
 - Pet
-- Occupation
+- Occupations
 
 ## Task 1
 

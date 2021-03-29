@@ -10,3 +10,21 @@ let hogwarts = [
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
+
+// task one
+var [first,second, third, , , , , ,lasttwo,last] = hogwarts;
+function gryffindor(object){
+    if(object.pet != null && object.occupation == "Teacher"){
+        console.log("-------------------")
+        console.log("Task 2")
+        console.log(`${object.firstName} ${object.lastName}`);
+    }else{
+        console.log(`${object.firstName} ${object.lastName}`);
+    }
+}
+console.log("Task 1")
+gryffindor(first);
+gryffindor(second);
+gryffindor(third);
+gryffindor(lasttwo);
+gryffindor(last);
