@@ -7,3 +7,21 @@
      { itemName: "Hash Brown", quantity: 4, unitPrice: 0.40}
  ]
  
+ let [a,b,c,d,e,f] = order;
+ let sum = 0;
+ function printitems(object){
+    sum += object.unitPrice * object.quantity
+    console.log(`${object.quantity}      ${object.itemName}       ${(object.unitPrice * object.quantity).toFixed(2)}`);
+ }
+
+
+
+ console.log("QTY    ITEM          TOTAL");
+ printitems(a)
+ printitems(b)
+ printitems(c)
+ printitems(d)
+ printitems(e)
+ printitems(f)
+console.log("-----------------------------------------")
+ console.log("Total:" + sum);
