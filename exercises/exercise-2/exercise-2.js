@@ -29,7 +29,7 @@ peopleOfGryffindor(hogwarts);
 console.log("------------------")
 
 //* Task - 2
-function teachersWithPets(hogwarts) {
+function teachersHavePets(hogwarts) {
     let count = 1;
     console.log("Names of teachers who have pets:")
     hogwarts.forEach(item => {
@@ -41,4 +41,4 @@ function teachersWithPets(hogwarts) {
     })
 }
 
-teachersWithPets(hogwarts);
+teachersHavePets(hogwarts);
