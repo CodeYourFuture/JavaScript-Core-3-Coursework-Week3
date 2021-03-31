@@ -71,9 +71,10 @@ let hogwarts = [
   },
 ];
 
+  let [firstName, lastName, house, pet, occupation] = hogwarts;
 //Task 1
 function GryffindorHouse(result) {
-  let [firstName, lastName, house, pet, occupation] = hogwarts;
+
   result.forEach((person) => {
     if (person.house == "Gryffindor") {
       console.log(person.firstName, person.lastName);
@@ -88,7 +89,7 @@ GryffindorHouse(hogwarts);
 console.log("Task 2", "\n");
 
 function petFinder(res) {
-  let [firstName, lastName, house, pet, occupation] = hogwarts;
+ 
 
   const getTeacherWithPet = res.filter(({ pet, occupation }) => {
     return pet && occupation.includes("Teacher");
