@@ -7,3 +7,30 @@
      { itemName: "Hash Brown", quantity: 4, unitPrice: 0.40}
  ]
  
+
+ /*
+- In `exercise-3.js`, you have been provided with a takeout order. Write a program that will print out the receipt for this order.
+- Log each individual item to the console.
+- Log the total cost of the order to the console.
+
+ */
+
+let { itemName, quantity, unitPrice} = order;
+
+
+function createReceiptOrder(order){
+    console.log(`QTY   ITEM              TOTAL`)
+    let total = 0
+    order.forEach(element => {
+        total += element.quantity * element.unitPrice;
+        console.log(
+       `${element.quantity}     ${element.itemName}           ${(
+         element.quantity * element.unitPrice
+       ).toFixed(2)}`
+     );
+    });
+    console.log(`\nTOTAL: ${total}`);
+}
+
+createReceiptOrder(order)
+
