@@ -7,10 +7,12 @@ let order = [
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
 
+// calculate total price of each item
 function getPriceSum(qty, price) {
   return parseFloat(qty * price);
 }
 
+//loop into an object and display results
 function printReceipt(result) {
   let count = 0;
   console.log(`,,,`);
