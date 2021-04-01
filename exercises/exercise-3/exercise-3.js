@@ -9,6 +9,7 @@ let order = [
 
 const myFunc = (obj) => {
   let total = 0;
+
   console.log(`QTY ITEM TOTAL`);
   for (let { itemName, quantity, unitPrice } of obj) {
     unitPrice *= quantity;
