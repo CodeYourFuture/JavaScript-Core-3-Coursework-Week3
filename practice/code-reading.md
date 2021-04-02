@@ -15,6 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+- In line 4 x is function level variable and output is 2, in line 6 x is defined global scoped and output is 1.
 
 ## Question 2
 
@@ -34,6 +35,12 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+- The output of this code will be:
+ 10
+ undefined
+- x is defined as a global variable and when we consoled (f1()) the output will be 10.
+- y is defined inside the function and when we consoled y outside the function we will get an error "y is not defined".  
+
 
 ## Question 3
 
@@ -62,3 +69,9 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+- The output will be:
+9
+{ x: 10 }
+- Although f1(x) will return 10, x will stays same (9) because x is a constant and cannot be changed.
+- The function f2(y) will return {x:10} because y is an object and object property can be changed.
+

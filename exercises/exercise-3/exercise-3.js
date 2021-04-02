@@ -15,19 +15,17 @@
 
  */
 
-let { itemName, quantity, unitPrice} = order;
+
 
 
 function createReceiptOrder(order){
-    console.log(`QTY   ITEM              TOTAL`)
+    console.log(`QTY  ITEM            TOTAL`);
     let total = 0
-    order.forEach(element => {
-        total += element.quantity * element.unitPrice;
-        console.log(
-       `${element.quantity}     ${element.itemName}           ${(
-         element.quantity * element.unitPrice
-       ).toFixed(2)}`
-     );
+    order.forEach((item) => {
+      let { itemName, quantity, unitPrice } = item;
+      total += quantity * unitPrice;
+      console.log(`${quantity}    ${itemName}        £${(
+        quantity * unitPrice).toFixed(2)}`);
     });
     console.log(`\nTOTAL: ${total}`);
 }
