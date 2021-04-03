@@ -70,3 +70,25 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function displayHogwartsCharacterDetails(arr) { 
+    return arr.filter((person) => {
+    let {firstName, lastName, house} = person;
+    if (house === "Gryffindor") {
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+displayHogwartsCharacterDetails(hogwarts);
+
+function teachersWhoHavePets(arr) {
+  arr.filter((person) => {
+    let {firstName, lastName, pet, occupation} = person;
+    if (occupation === "Teacher" && pet !== null){
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+teachersWhoHavePets(hogwarts);

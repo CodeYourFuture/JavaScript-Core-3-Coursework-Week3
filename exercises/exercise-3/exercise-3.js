@@ -6,3 +6,19 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function printTakeOutOrder(orderList) {
+  console.log(`QTY\tITEM\t\t\tTOTAL`);
+  let orderTotal = 0;
+  orderList.map((item) => {
+    let {itemName, quantity, unitPrice} = item;
+    let total = quantity * unitPrice;
+    orderTotal += total;
+    total = total.toFixed(2);
+    console.log(`${quantity}\t${itemName}\t\t${total}`);
+  });
+
+  console.log(`\nTotal: ${orderTotal}`);
+}
+
+printTakeOutOrder(order);
