@@ -70,3 +70,53 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//Task-1
+for (const person of hogwarts) {
+  if (person.house === 'Gryffindor') {
+      let {
+          firstName,
+          lastName
+      } = person;
+      console.log(`${firstName} ${lastName}`);
+
+  }
+}
+
+//Other solutions for Task-1
+
+// hogwarts.filter(person => { //Also we can use map and forEach methods instead of filter
+
+//   if (person.house === 'Gryffindor') {
+//       let {
+//           firstName,
+//           lastName
+//       } = person;
+//       console.log(`${firstName} ${lastName}`);
+//   }
+// });
+
+
+//Task-2
+for (const person of hogwarts) {
+  if (person.pet !== null && person.occupation === 'Teacher') {
+      let {
+          firstName,
+          lastName
+      } = person;
+      console.log(`${firstName} ${lastName}`);
+
+  }
+}
+
+//Other Solutions for Task-2
+// hogwarts.filter(person => { //Also we can use map and forEach methods instead of filter
+
+//           if (person.pet !== null && person.occupation === 'Teacher') {
+//               let {
+//                   firstName,
+//                   lastName
+//               } = person;
+//               console.log(`${firstName} ${lastName}`);
+//           }
+// });
