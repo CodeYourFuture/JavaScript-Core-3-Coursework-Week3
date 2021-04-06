@@ -7,16 +7,18 @@ let order = [
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
 
-const myFunc = (obj) => {
-  let total = 0;
+const createReceipt = (orderObj) => {
+  let toPay = 0;
 
   console.log(`QTY ITEM TOTAL`);
-  for (let { itemName, quantity, unitPrice } of obj) {
-    unitPrice *= quantity;
-    total += unitPrice;
-    console.log(`${quantity} ${itemName} ${unitPrice.toFixed(2)}`);
+
+  for (const { itemName, quantity, unitPrice } of orderObj) {
+    const unitTotal = unitPrice * quantity;
+    toPay += unitTotal;
+    console.log(`${quantity} ${itemName} ${unitTotal.toFixed(2)}`);
   }
-  console.log(`Total: ${total}`);
+
+  console.log(`Total: ${toPay}`);
 };
 
-myFunc(order);
+createReceipt(order);
