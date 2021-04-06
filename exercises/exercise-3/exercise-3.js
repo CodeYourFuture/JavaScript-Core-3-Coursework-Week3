@@ -20,13 +20,3 @@ const myFunc = (obj) => {
 };
 
 myFunc(order);
-
-// QTY     ITEM                TOTAL
-// 1       Hot Cakes           2.29
-// 2       Apple Pie           2.78
-// 1       Egg McMuffin        2.80
-// 1       Sausage McMuffin    3.00
-// 2       Hot Coffee          2.00
-// 4       Hash Brown          1.60
-
-// Total: 14.47
