@@ -70,3 +70,18 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+// students in Gryffindor
+[{ firstName, lastName, house, pet, occupation }] = hogwarts;
+let GryffindorHouse = hogwarts.filter(({ house }) => house === "Gryffindor");
+let GryffindorNames = GryffindorHouse.map(
+  ({ firstName, lastName }) => firstName + " " + lastName
+);
+console.log(GryffindorNames);
+// teachers with pets
+let teachers = hogwarts.filter(
+  ({ occupation, pet }) => occupation === "Teacher" && pet !== null
+);
+let teachersWithPets = teachers.map(
+  ({ firstName, lastName }) => firstName + " " + lastName
+);
+console.log(teachersWithPets);

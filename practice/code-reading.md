@@ -14,7 +14,8 @@ Take a look at the following code:
 7    console.log(x);
 ```
 
-Explain why line 4 and line 6 output different numbers.
+Explain why line 5 and line 7 output different numbers.
+Line 7 outputs the value of x declared on line 1. Line 5 throws an error because x has already been declared.
 
 ## Question 2
 
@@ -34,6 +35,7 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+The output will be 10 and undefined because the console log outside the function does not have access to the variable y.
 
 ## Question 3
 
@@ -47,8 +49,8 @@ function f1(val) {
   return val;
 }
 
-f1(x);
-console.log(x);
+f1(x); // this will be skipped because we need to wrap it with console.log
+console.log(x); // returns 9
 
 const y = { x: 9 };
 
@@ -62,3 +64,4 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+The object y's value of x which is 9 has been updated to 10.
