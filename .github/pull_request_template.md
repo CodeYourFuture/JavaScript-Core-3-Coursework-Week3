@@ -16,14 +16,14 @@ Please complete the details below this message
 
 # Your Details
 
-- Your Name:
-- Your City:
-- Your Slack Name:
+- Your Name: Kara Howard
+- Your City: London
+- Your Slack Name: Kara Howard
 
 # Homework Details
 
-- Module:
-- Week:
+- Module: JavaScript Core 3
+- Week: 3
 
 # Notes
 
