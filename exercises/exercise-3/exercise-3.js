@@ -1,7 +1,7 @@
 let order = [
   { itemName: "Hot cakes", quantity: 1, unitPrice: 2.29 },
   { itemName: "Apple Pie", quantity: 2, unitPrice: 1.39 },
-  { itemName: "Egg McMuffin", quantity: 1, unitPrice: 2.8 },
+  { itemName: "Egg McMuffing", quantity: 1, unitPrice: 2.8 },
   { itemName: "Sausage McMuffin", quantity: 1, unitPrice: 3.0 },
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
@@ -21,15 +21,24 @@ let order = [
 // Total: 14.47
 // ```
 function totalCost(array){
-  console.log(`QTY     ITEM                TOTAL`)
+  console.log(`QTY\tITEM\t\t\tTOTAL`);
+  console.log(' ');
   let total = 0;
 array.forEach(element => {
   let {itemName, quantity, unitPrice} = element;
-  console.log(`${quantity}       ${itemName}           ${unitPrice.toFixed(2)}`)
-  let costOfItems = unitPrice*quantity;
+  let costOfItems = unitPrice * quantity;
   total += costOfItems;
+  if(itemName.length > 15) {
+    console.log(`${quantity}\t${itemName}\t${unitPrice.toFixed(2)}`);
+  } else {
+    console.log(`${quantity}\t${itemName}\t\t${unitPrice.toFixed(2)}`);
+  }
+  
+  
 });
-console.log('Total: ', total.toFixed(2));
+console.log(' ');
+console.log('Total:','£' + total.toFixed(2));
 }
 
 totalCost(order);
+
