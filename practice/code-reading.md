@@ -15,6 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+Because of the scope, let x = 2 only is able to access inside function.
 
 ## Question 2
 
@@ -31,9 +32,11 @@ function f1()
 
 console.log(f1())
 console.log(y)
-```
 
-What will be the output of this code. Explain your answer in 50 words or less.
+
+<!-- What will be the output of this code. Explain your answer in 50 words or less.
+console.log(f1()) will return 10
+console.log(y) undefined because it is only reachable inside the function
 
 ## Question 3
 
@@ -61,4 +64,8 @@ f2(y);
 console.log(y);
 ```
 
-What will be the output of this code. Explain your answer in 50 words or less.
+What will be the output of this code. Explain your answer in 50 words or less. -->
+
+console.log(x) will be 9 because the variable const set the number 9 and will not change
+
+console.log(y) will be {x: 10} because y is an object and we can change what is inside the object

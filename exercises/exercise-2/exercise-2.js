@@ -70,3 +70,27 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+function GryffindorHouse(arr){
+  let filteredArray = arr.filter(element => element.house === "Gryffindor")
+// console.log(filteredArray);
+
+filteredArray.forEach(element => {
+  let{firstName,lastName} = element;
+  console.log(firstName, lastName);
+})
+}
+
+GryffindorHouse(hogwarts);
+
+function teacherWithPets(arr){
+  let filteredArray = arr.filter(element => element.pet !== null && element.occupation === "Teacher")
+  console.log(filteredArray)
+  filteredArray.forEach(element => {
+    let { firstName, lastName } = element;
+    console.log(firstName, lastName);
+  })
+}
+
+teacherWithPets(hogwarts);
