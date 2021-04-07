@@ -70,3 +70,32 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+// Task 1
+
+function teamGryffindor(hogwarts) {
+  console.log('Task 1:');
+  for (character of hogwarts) {
+    if (character.house === "Gryffindor") {
+      let { firstName, lastName } = character;
+      console.log(firstName, lastName);
+    }
+  }
+};
+
+teamGryffindor(hogwarts);
+console.log(' ');
+
+// Task 2
+
+function whoHasPets(hogwarts) {
+  console.log('Task 2:');
+  for (character of hogwarts) {
+    if (character.occupation === "Teacher" && character.pet !== null) {
+      let { firstName, lastName } = character;
+      console.log(firstName, lastName);
+    }
+  }
+};
+
+whoHasPets(hogwarts);
