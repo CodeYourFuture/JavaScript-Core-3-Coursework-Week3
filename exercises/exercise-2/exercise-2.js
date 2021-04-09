@@ -1,4 +1,4 @@
-let hogwarts = [
+const hogwarts = [
   {
     firstName: "Harry",
     lastName: "Potter",
@@ -70,3 +70,15 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//Task 1
+const getGryffindorNames = arr => arr.filter(({ house }) => house === "Gryffindor")
+  .forEach(({ firstName: fName, lastName: lName }) => console.log(`First Name: ${fName}, Last Name: ${lName} `));
+
+getGryffindorNames(hogwarts);
+
+//Task 2
+const getTeacherNamePetOwners = arr => arr.filter(({ occupation, pet }) => occupation === 'Teacher' && pet !== null)
+  .forEach(({ firstName, lastName }) => console.log(firstName, lastName));
+
+getTeacherNamePetOwners(hogwarts);

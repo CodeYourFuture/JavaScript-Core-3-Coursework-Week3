@@ -16,6 +16,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+The code above only logs 1, but if you call the function it logs 2. they have different outputs because of the scope, the x on line 4 exists only inside the f1 function.
+
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +36,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+It will log only x, you can't access something defined inside a function from the outside.
 
 ## Question 3
 
@@ -62,3 +66,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+the first const x is binded to number 9, the second const y is binded to an object and objects can be modified.
