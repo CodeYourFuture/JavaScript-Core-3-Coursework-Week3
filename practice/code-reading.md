@@ -15,6 +15,8 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+- Because in line 4 the "X" belongs to a variable that have an output of "2"
+- Because "X" is defined as a global scoped and makes an output of "1"
 
 ## Question 2
 
@@ -34,6 +36,11 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+- "X" is a global variable after F1 is being consoled answer is "10"
+- "Y" is defined inside the function, if is defined outside the function will appear: NOT DEFINED
+
+=> 10
+Undefined
 
 ## Question 3
 
@@ -62,3 +69,8 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+- Constant can not be changed "10" will remain "9".
+- Objects properties can be change on line 62.
+=> 9
+{x:10}
