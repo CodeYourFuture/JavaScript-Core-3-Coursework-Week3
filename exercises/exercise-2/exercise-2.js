@@ -70,3 +70,19 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+// Task 1
+hogwarts
+  .filter((person) => person.house == "Gryffindor")
+  .map((person) => {
+    const { firstName, lastName } = person;
+    console.log(`${firstName} ${lastName}`);
+  });
+
+// Task 2
+hogwarts
+  .filter((person) => person.occupation == "Teacher" && person.pet!= null)
+  .map((Teacher) => {
+    const { firstName, lastName } = Teacher;
+    console.log(`${firstName} ${lastName}`);
+  });
