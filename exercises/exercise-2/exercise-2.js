@@ -70,3 +70,14 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+for (let i=0; i<hogwarts.length; i++){
+  const person = hogwarts[i]
+  const {firstName, lastName, house, pet, occupation} = person;
+  if(house === "Gryffindor"){
+    console.log(`${firstName} ${lastName} is in Gryffindor` )
+  }
+  if(pet!==null && occupation==="Teacher"){
+    console.log(`${firstName} ${lastName} has a pet called ${pet}` )
+  }
+}
