@@ -70,3 +70,27 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+// Task 1
+
+function getPersonsNames(list) {
+  let newList = list.filter(person => person.house === "Gryffindor");
+
+  newList.forEach(({ firstName, lastName }) => {
+    console.log(`${firstName} ${lastName}`)
+  });
+}
+
+getPersonsNames(hogwarts);
+
+// Task 2
+
+function getPersonsNamesWithAPet(list) {
+  let newList = list.filter(person => person.pet !== null && person.occupation === "Teacher");
+
+  newList.forEach(({ firstName, lastName }) => {
+    console.log(`${firstName} ${lastName}`)
+  });
+}
+
+getPersonsNamesWithAPet(hogwarts);
