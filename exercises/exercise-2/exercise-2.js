@@ -17,8 +17,8 @@ let hogwarts = [
       if (house === "Gryffindor") {
            console.log(`${firstName} ${lastName} ${rest.pet}`)
               
-  })
-  
+  }
+})
 console.log("--------------------------------------")
    // let [harry, hermione, draco, cedric,severus, filius, pomona, minerva, albus] = hogwarts;
    // console.log(`${harry.firstName} ${harry.lastName}`)
