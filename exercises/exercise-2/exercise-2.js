@@ -70,3 +70,10 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+let [Gryffindor, firstName, lastName ] = hogwarts;
+// console.log(`${Gryffindor.firstName} ${Gryffindor.lastName}`);
+
+let obj = hogwarts.filter(hogwartsObjects => hogwartsObjects.house === "Gryffindor").map(objectWithGryffindor => {
+  console.log(`${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
+});
