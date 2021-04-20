@@ -6,3 +6,20 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+let [{ itemName, quantity, unitPrice }] = order;
+
+console.log(`QTY  ITEM              TOTAL`);
+
+for (value in order) {
+  // console.log(`value: ${order[value].quantity}`)
+  console.log(`${order[value].quantity}    ${order[value].itemName}         ${order[value].unitPrice}`);
+};
+
+let total = order.reduce(
+  function (previousNumber, currentNumber) {
+    return previousNumber + currentNumber.unitPrice;
+  }, 0);
+
+
+console.log(`Total: ${total}`);
