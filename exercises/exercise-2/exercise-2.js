@@ -70,10 +70,24 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
-
-let [Gryffindor, firstName, lastName ] = hogwarts;
+/*
+const [, , { house }] = hogwarts;
+console.log(`house ${house}`);
+const [ { firstName }] = hogwarts;
+console.log(`firstName ${firstName}`);
+*/
+let [Gryffindor, firstName, lastName, pet ] = hogwarts;
 // console.log(`${Gryffindor.firstName} ${Gryffindor.lastName}`);
 
+//  Task1
 let obj = hogwarts.filter(hogwartsObjects => hogwartsObjects.house === "Gryffindor").map(objectWithGryffindor => {
-  console.log(`${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
+  console.log(`Task1: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
+});
+
+
+//  Task2
+let obj2 = hogwarts
+  .filter(hogwartsObjects => hogwartsObjects.pet !== null && hogwartsObjects.occupation === "Teacher")
+  .map(objectWithGryffindor => {
+  console.log(`Task2: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
 });
