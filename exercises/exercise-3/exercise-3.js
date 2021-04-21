@@ -9,17 +9,21 @@ let order = [
 
 let [{ itemName, quantity, unitPrice }] = order;
 
-console.log(`QTY  ITEM              TOTAL`);
+console.log(`QTY\tITEM\t\t\t\tTOTAL`);
+
+let total = 0;
 
 for (value in order) {
-  // console.log(`value: ${order[value].quantity}`)
-  console.log(`${order[value].quantity}    ${order[value].itemName}         ${order[value].unitPrice}`);
+  //  console.log(`value of quantity: ${order[value].quantity}`)
+  console.log(`${order[value].quantity}\t${order[value].itemName.padEnd(16, " ")}\t \t${order[value].unitPrice * order[value].quantity}`);  
+  // console.log(`Total1: ${total}`)
+  total += order[value].unitPrice * order[value].quantity;
+  // console.log(`Total2: ${total}`)
 };
 
-let total = order.reduce(
-  function (previousNumber, currentNumber) {
-    return previousNumber + currentNumber.unitPrice;
-  }, 0);
-
+// let total = order.reduce(someFunction, 0);
+// function someFunction (previousNumber, currentNumber) {
+//   return previousNumber + currentNumber.unitPrice * currentNumber.quantity;
+// };
 
 console.log(`Total: ${total}`);
