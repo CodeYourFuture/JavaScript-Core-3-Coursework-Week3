@@ -76,24 +76,35 @@ console.log(`house ${house}`);
 const [ { firstName }] = hogwarts;
 console.log(`firstName ${firstName}`);
 */
-let [Gryffindor, firstName, lastName, pet ] = hogwarts;
-// console.log(`${Gryffindor.firstName} ${Gryffindor.lastName}`);
-
+let [{ firstName: a, lastName: b },{ firstName: c , lastName: d },...restOfArray] = hogwarts;
+console.log(`${c} ${d}`);
+restOfArray.forEach(el => console.log(el.firstName)
+);
 //  Task1
 
-let obj = hogwarts.filter(hogwartsObjects => hogwartsObjects.house === "Gryffindor").map(objectWithGryffindor => {
-  console.log(`Task1: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
-});
+// let obj = hogwarts.filter(hogwartsObjects => hogwartsObjects.house === "Gryffindor").map(objectWithGryffindor => {
+//   console.log(`Task1: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
+// });
+
+// filter returns a new array
 
 
 //  Task2
+/*
 let obj2 = hogwarts
   .filter(hogwartsObjects => hogwartsObjects.pet !== null && hogwartsObjects.occupation === "Teacher")
   .map(objectWithGryffindor => {
   console.log(`Task2: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
-});
+  });
+  */
 
-/*  
+//  Task 2
+hogwarts
+  .filter(({ occupation, pet }) => occupation === "Teacher" && pet )
+  .forEach(({ firstName, lastName }) => console.log(`Task2: ${firstName} ${lastName}`));
+
+
+  /*
 Tried something in the resources.
 
 function findMember(houseName, hogwarts) {
@@ -101,6 +112,7 @@ function findMember(houseName, hogwarts) {
   for (let [index, house] of hogwarts.entries()) {
     console.log(`house:${house}`);
     console.log(`index:${index}`);
+    
     if (house.house === houseName) {
       console.log(house, index);
       return { house, index };
