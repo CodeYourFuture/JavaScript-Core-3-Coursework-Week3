@@ -70,18 +70,20 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
-/*
-const [, , { house }] = hogwarts;
-console.log(`house ${house}`);
-const [ { firstName }] = hogwarts;
-console.log(`firstName ${firstName}`);
-*/
-let [{ firstName: a, lastName: b },{ firstName: c , lastName: d },...restOfArray] = hogwarts;
-console.log(`${c} ${d}`);
-restOfArray.forEach(el => console.log(el.firstName)
-);
-//  Task1
 
+// const [, , { house }] = hogwarts;
+// console.log(`house:\t${house}`);
+// const [ { firstName }] = hogwarts;
+// console.log(`firstName:\t${firstName}`);
+
+//  Task1
+let [{ firstName: a, lastName: b },{ firstName: c , lastName: d },...restOfArray] = hogwarts;
+console.log(`c+d:\t${c} ${d}`);
+restOfArray.forEach(ItemInArray => console.log(`Task1:\t${ItemInArray.firstName} ${ItemInArray.lastName}`)
+);
+
+// Task1
+//  //  No destructuring used here!
 // let obj = hogwarts.filter(hogwartsObjects => hogwartsObjects.house === "Gryffindor").map(objectWithGryffindor => {
 //   console.log(`Task1: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
 // });
@@ -89,39 +91,16 @@ restOfArray.forEach(el => console.log(el.firstName)
 // filter returns a new array
 
 
+//  Task 2
+hogwarts
+.filter(({ occupation, pet }) => occupation === "Teacher" && pet )
+.forEach(({ firstName, lastName }) => console.log(`Task2: \t${firstName} ${lastName}`));
+
 //  Task2
-/*
+/*  //  No destructuring used here!
 let obj2 = hogwarts
   .filter(hogwartsObjects => hogwartsObjects.pet !== null && hogwartsObjects.occupation === "Teacher")
   .map(objectWithGryffindor => {
   console.log(`Task2: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
   });
   */
-
-//  Task 2
-hogwarts
-  .filter(({ occupation, pet }) => occupation === "Teacher" && pet )
-  .forEach(({ firstName, lastName }) => console.log(`Task2: ${firstName} ${lastName}`));
-
-
-  /*
-Tried something in the resources.
-
-function findMember(houseName, hogwarts) {
-  console.log(`houseName: ${houseName}`)
-  for (let [index, house] of hogwarts.entries()) {
-    console.log(`house:${house}`);
-    console.log(`index:${index}`);
-    
-    if (house.house === houseName) {
-      console.log(house, index);
-      return { house, index };
-    }
-  }
-  // Default values if we can't find our house:
-  // return { house: undefined, index: -1 }; 
-}
-
-// Output:
-findMember("Gryffindor", hogwarts);
-*/
