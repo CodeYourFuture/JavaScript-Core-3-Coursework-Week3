@@ -1,72 +1,95 @@
 let hogwarts = [
   {
-    firstName: "Harry",
-    lastName: "Potter",
-    house: "Gryffindor",
-    pet: "Owl",
-    occupation: "Student",
+    firstName: 'Harry',
+    lastName: 'Potter',
+    house: 'Gryffindor',
+    pet: 'Owl',
+    occupation: 'Student',
   },
   {
-    firstName: "Ron",
-    lastName: "Weasley",
-    house: "Gryffindor",
-    pet: "Scabbers",
-    occupation: "Student",
+    firstName: 'Ron',
+    lastName: 'Weasley',
+    house: 'Gryffindor',
+    pet: 'Scabbers',
+    occupation: 'Student',
   },
   {
-    firstName: "Hermione",
-    lastName: "Granger",
-    house: "Gryffindor",
-    pet: "Cat",
-    occupation: "Student",
+    firstName: 'Hermione',
+    lastName: 'Granger',
+    house: 'Gryffindor',
+    pet: 'Cat',
+    occupation: 'Student',
   },
   {
-    firstName: "Draco",
-    lastName: "Malfoy",
-    house: "Slytherin",
+    firstName: 'Draco',
+    lastName: 'Malfoy',
+    house: 'Slytherin',
     pet: null,
-    occupation: "Student",
+    occupation: 'Student',
   },
   {
-    firstName: "Cedric",
-    lastName: "Diggory",
-    house: "HufflePuff",
+    firstName: 'Cedric',
+    lastName: 'Diggory',
+    house: 'HufflePuff',
     pet: null,
-    occupation: "Student",
+    occupation: 'Student',
   },
   {
-    firstName: "Severus",
-    lastName: "Snape",
-    house: "Slytherin",
+    firstName: 'Severus',
+    lastName: 'Snape',
+    house: 'Slytherin',
     pet: null,
-    occupation: "Teacher",
+    occupation: 'Teacher',
   },
   {
-    firstName: "Filius",
-    lastName: "Flitwick",
-    house: "Ravenclaw",
+    firstName: 'Filius',
+    lastName: 'Flitwick',
+    house: 'Ravenclaw',
     pet: null,
-    occupation: "Teacher",
+    occupation: 'Teacher',
   },
   {
-    firstName: "Pomona",
-    lastName: "Sprout",
-    house: "Hufflepuff",
+    firstName: 'Pomona',
+    lastName: 'Sprout',
+    house: 'Hufflepuff',
     pet: null,
-    occupation: "Teacher",
+    occupation: 'Teacher',
   },
   {
-    firstName: "Minerva",
-    lastName: "McGonagall",
-    house: "Gryffindor",
+    firstName: 'Minerva',
+    lastName: 'McGonagall',
+    house: 'Gryffindor',
     pet: null,
-    occupation: "Teacher",
+    occupation: 'Teacher',
   },
   {
-    firstName: "Albus",
-    lastName: "Dumbledore",
-    house: "Gryffindor",
-    pet: "Phoenix",
-    occupation: "Teacher",
+    firstName: 'Albus',
+    lastName: 'Dumbledore',
+    house: 'Gryffindor',
+    pet: 'Phoenix',
+    occupation: 'Teacher',
   },
 ];
+
+// TASK 1
+function houseDestructuring(peopleArr) {
+  peopleArr.forEach((person) => {
+    let { house: personHouse } = person;
+    if (personHouse == 'Gryffindor')
+      console.log(`${person.firstName} ${person.lastName}`);
+  });
+}
+
+houseDestructuring(hogwarts);
+
+console.log('<----------------->');
+
+function petDestructuring(peopleArr) {
+  peopleArr.forEach((person) => {
+    let { pet: hasPet, occupation: personOccup } = person;
+    if (hasPet != null && personOccup == 'Teacher')
+      console.log(`${person.firstName} ${person.lastName}`);
+  });
+}
+
+petDestructuring(hogwarts);
