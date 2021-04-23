@@ -74,8 +74,8 @@ let hogwarts = [
 // TASK 1
 function houseDestructuring(peopleArr) {
   peopleArr.forEach((person) => {
-    let { house: personHouse } = person;
-    if (personHouse == 'Gryffindor')
+    let { house } = person;
+    if (house == 'Gryffindor')
       console.log(`${person.firstName} ${person.lastName}`);
   });
 }
@@ -86,8 +86,8 @@ console.log('<----------------->');
 
 function petDestructuring(peopleArr) {
   peopleArr.forEach((person) => {
-    let { pet: hasPet, occupation: personOccup } = person;
-    if (hasPet != null && personOccup == 'Teacher')
+    let { pet, occupation } = person;
+    if (pet != null && occupation == 'Teacher')
       console.log(`${person.firstName} ${person.lastName}`);
   });
 }
