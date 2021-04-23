@@ -70,3 +70,13 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+let gryffNames = arr => arr.filter(({house}) => house === "Gryffindor")
+  .forEach(({firstName: fName, lastName: surname}) => console.log(`${fName}` + " " + `${surname}`))
+
+gryffNames(hogwarts)
+
+let teacherHavePet = arr => arr.filter(({occupation, pet}) => occupation === "Teacher" && pet != null)
+  .forEach(({firstName: fName, lastName: surName}) => console.log(`${fName}` + " " + `${surName}`))
+
+  teacherHavePet(hogwarts);
