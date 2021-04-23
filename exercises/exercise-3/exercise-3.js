@@ -6,3 +6,11 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+console.log(`QTY\t\tITEM\t\t\t\tTOTAL`);
+let priceTotal = 0;
+for ({ quantity, itemName, unitPrice} of order){
+  priceTotal += quantity * unitPrice;
+  console.log(`${quantity}\t\t${itemName}\t\t\t${quantity * unitPrice}`);
+}
+console.log(`Total: ${priceTotal}`);
