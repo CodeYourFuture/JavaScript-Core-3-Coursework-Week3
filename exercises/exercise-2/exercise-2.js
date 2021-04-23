@@ -70,3 +70,23 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+//task1
+
+//hogwarts.forEach(peopleHouse =>{
+  /*if(peopleHouse.house ==='Gryffindor'){
+  //   console.log(`${peopleHouse.firstName}  ${peopleHouse.lastName}`)
+  }*/
+  //by using array destructuring it would look like this
+//   if(peopleHouse.house==='Gryffindor'){
+//     let {firstName,lastName}=hogwarts;
+//     console.log(`${peopleHouse.firstName}  ${peopleHouse.lastName}`)
+//   }
+// })
+
+//task2
+for (let eachPerson in hogwarts){
+  if(hogwarts[eachPerson].pet&&hogwarts[eachPerson].occupation=='Teacher'){
+    let {occupation,firstName,lastName}=hogwarts[eachPerson];
+    console.log(`${hogwarts[eachPerson].firstName} ${hogwarts[eachPerson].lastName}`)
+  }
+}
