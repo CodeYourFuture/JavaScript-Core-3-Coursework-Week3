@@ -11,7 +11,8 @@ console.log(`QTY\tITEM\t\t\tTOTAL`);
 let sum = 0;
 order.forEach((item) => {
   let { itemName, quantity, unitPrice } = item;
-  sum += unitPrice * quantity;
-  console.table(`${quantity}\t${itemName}\t\t${unitPrice.toFixed(2)}`);
+  let itemTotal = unitPrice * quantity;
+  sum += itemTotal;
+  console.log(`${quantity}\t${itemName}\t\t${itemTotal.toFixed(2)}`);
 });
 console.log(`Total:  ${sum}`);
