@@ -80,7 +80,7 @@ let hogwarts = [
 hogwarts
   .filter(({ house }) => house === "Gryffindor")  //  Checking for all houses with value Gryffindor.
   .forEach(({ firstName, lastName }) => console.log(`Task1:\t${firstName}${lastName}`));  //  log those houses first and last name.
-  
+
 // Task1  No Destructuring used here!  
 // hogwarts
 //   .filter(hogwartsObjects => hogwartsObjects.house === "Gryffindor")
@@ -96,6 +96,6 @@ hogwarts
 //  Task2  No destructuring used here!
 // hogwarts
 //   .filter(hogwartsObjects => hogwartsObjects.pet !== null && hogwartsObjects.occupation === "Teacher")
-//   .map(objectWithGryffindor => {
+//   .forEach(objectWithGryffindor => {
 //   console.log(`Task2: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
 //   });
