@@ -76,31 +76,26 @@ let hogwarts = [
 // const [ { firstName }] = hogwarts;
 // console.log(`firstName:\t${firstName}`);
 
-//  Task1
-let [{ firstName: a, lastName: b },{ firstName: c , lastName: d },...restOfArray] = hogwarts;
-console.log(`c+d:\t${c} ${d}`);
-restOfArray.forEach(ItemInArray => console.log(`Task1:\t${ItemInArray.firstName} ${ItemInArray.lastName}`)
-);
+//  Task1 Ddestructuring in action!
+hogwarts
+  .filter(({ house }) => house === "Gryffindor")  //  Checking for all houses with value Gryffindor.
+  .forEach(({ firstName, lastName }) => console.log(`Task1:\t${firstName}${lastName}`));  //  log those houses first and last name.
+  
+// Task1  No Destructuring used here!  
+// hogwarts
+//   .filter(hogwartsObjects => hogwartsObjects.house === "Gryffindor")
+//   .forEach(objectWithGryffindor => {
+//     console.log(`Task1: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
+//   });
 
-// Task1
-//  //  No destructuring used here!
-// let obj = hogwarts.filter(hogwartsObjects => hogwartsObjects.house === "Gryffindor").map(objectWithGryffindor => {
-//   console.log(`Task1: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
-// });
-
-// filter returns a new array
-
-
-//  Task 2
+//  Task 2  Destructuring in action!
 hogwarts
 .filter(({ occupation, pet }) => occupation === "Teacher" && pet )
 .forEach(({ firstName, lastName }) => console.log(`Task2: \t${firstName} ${lastName}`));
 
-//  Task2
-/*  //  No destructuring used here!
-let obj2 = hogwarts
-  .filter(hogwartsObjects => hogwartsObjects.pet !== null && hogwartsObjects.occupation === "Teacher")
-  .map(objectWithGryffindor => {
-  console.log(`Task2: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
-  });
-  */
+//  Task2  No destructuring used here!
+// hogwarts
+//   .filter(hogwartsObjects => hogwartsObjects.pet !== null && hogwartsObjects.occupation === "Teacher")
+//   .map(objectWithGryffindor => {
+//   console.log(`Task2: ${objectWithGryffindor.firstName} ${objectWithGryffindor.lastName}`);
+//   });
