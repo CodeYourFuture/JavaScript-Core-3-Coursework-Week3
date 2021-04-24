@@ -18,17 +18,12 @@ for (values in order) {
   //  console.log(`values of quantity: ${order[values].quantity}`)
   //  Values returns/ an object/s, I access the keys and values using dot notaion and the destructured keys.
   console.log(`${order[values].quantity}\t${order[values].itemName.padEnd(16, " ")}\t \t${order[values].unitPrice * order[values].quantity}`);
-  // console.log(`Total1: ${total}`)  //  Before increment
+  // console.log(`Total1: ${totalPrice}`)  //  Before increment
   totalPrice += order[values].unitPrice * order[values].quantity;
   totalItems += order[values].quantity
   /* adds 1 values to another and stores it in totalprice => takes the new values and add the next values to it and stores it in totalPrice...*/
   // console.log(`Total2: ${totalPrice}`) //  After increment
 };
-
-// let totalPrice = order.reduce(someFunction, 0);
-// function someFunction (previousNumber, currentNumber) {
-//   return previousNumber + currentNumber.unitPrice * currentNumber.quantity;
-// };
 
 console.log(`Total Price: ${totalPrice}`);
 console.log(`Total Items: ${totalItems}`);
