@@ -70,3 +70,28 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+// get names of people in Gryffindor house
+function getName(arr) {
+  arr.forEach((element) => {
+    if (element.house === "Gryffindor") {
+      let { firstName, lastName } = element;
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+getName(hogwarts);
+
+// separation line
+console.log("________________");
+
+// get name of teacher with pet
+function getPet(arr) {
+  arr.forEach((element) => {
+    if (element.pet !== null && element.occupation === "Teacher") {
+      let { firstName, lastName } = element;
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+getPet(hogwarts);
