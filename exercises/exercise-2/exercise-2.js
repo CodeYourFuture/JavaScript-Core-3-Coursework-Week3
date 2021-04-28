@@ -70,3 +70,23 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//Task 1
+function Gryffindor(witchesAndWizards){
+  let [a, b, c, , , , , , i, j] = witchesAndWizards;
+  console.log(`${a.firstName} ${a.lastName}`);
+  console.log(`${b.firstName} ${b.lastName}`);
+  console.log(`${c.firstName} ${c.lastName}`);
+  console.log(`${i.firstName} ${i.lastName}`);
+  console.log(`${j.firstName} ${j.lastName}`);
+}
+Gryffindor(hogwarts);
+
+//Task 2
+function findPetTeacher(witchesAndWizards){
+  let [, , , , , , , , , j] = witchesAndWizards;
+
+  console.log(`${j.firstName} ${j.lastName}`);
+}
+
+findPetTeacher(hogwarts);
