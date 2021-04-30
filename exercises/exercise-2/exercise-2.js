@@ -70,3 +70,23 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+/*Task 1*/
+function getNames(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let { firstName: name, lastName: familyName } = arr[i];
+    console.log(`${name} ${familyName}`);
+  }
+}
+
+getNames(hogwarts);
+/* Task 2*/
+function hasPet(arr) {
+  let arr2 = arr.filter((elem) => {
+    return elem.pet != null && elem.occupation === "Teacher";
+  });
+  for (let i = 0; i < arr2.length; i++) {
+    let { firstName: name, lastName: familyName } = arr2[i];
+    console.log(`${name} ${familyName} has a pet`);
+  }
+}
+hasPet(hogwarts);
