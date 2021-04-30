@@ -14,7 +14,8 @@ Take a look at the following code:
 7    console.log(x);
 ```
 
-Explain why line 4 and line 6 output different numbers.
+Explain why line 4 and line 6 output different numbers. 
+solution: The 2 x's are different since they have different scopes.
 
 ## Question 2
 
@@ -34,6 +35,7 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+Solution: 10  from the first console.log. The second one will give an error because y is not defined in that scope.    
 
 ## Question 3
 
@@ -62,3 +64,4 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+Solution: 10  and the object y from the console.logs. f1 and f2 will not print anything because they are just being called without any actions.
