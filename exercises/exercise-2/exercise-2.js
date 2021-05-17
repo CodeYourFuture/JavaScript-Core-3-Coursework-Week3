@@ -71,7 +71,7 @@ let hogwarts = [
   },
 ];
 
-function atGryffindor(arr) {
+function atGryffindor(arr) { 
   for (i of arr) {
     const { firstName, lastName, house } = i;
     if (house === 'Gryffindor') {
@@ -81,3 +81,13 @@ function atGryffindor(arr) {
 }
 
 atGryffindor(hogwarts);
+
+function whoHasPet (arr) {
+  for (i of arr) {
+    const {firstName, lastName, pet, occupation} = i;
+    if (occupation === "Teacher" && pet) {
+      console.log(firstName, lastName);
+    }
+  }
+}
+console.log(whoHasPet(hogwarts));
