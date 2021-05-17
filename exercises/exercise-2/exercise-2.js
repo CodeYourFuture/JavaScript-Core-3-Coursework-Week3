@@ -70,3 +70,14 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function atGryffindor(arr) {
+  for (i of arr) {
+    const { firstName, lastName, house } = i;
+    if (house === 'Gryffindor') {
+      console.log(`${firstName} ${lastName}`);
+    }
+  }
+}
+
+atGryffindor(hogwarts);
