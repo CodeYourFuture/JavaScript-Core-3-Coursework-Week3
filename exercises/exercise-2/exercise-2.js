@@ -70,3 +70,20 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+hogwarts.forEach((gryffindorStudents) => {
+  let {firstName, lastName, house} = gryffindorStudents;
+  // if (({house}  = gryffindorStudents) === 'Gryffindor') {
+  //   return {house} // must figure out how to exclude other houses. 1/2 done
+  // }
+  console.log(`${firstName} ${lastName} ${house}`) 
+
+});
+
+
+
+
+
+
+
+
