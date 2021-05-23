@@ -71,15 +71,21 @@ let hogwarts = [
   },
 ];
 
-hogwarts.forEach((gryffindorStudents) => {
-  let {firstName, lastName, house} = gryffindorStudents;
-  // if (({house}  = gryffindorStudents) === 'Gryffindor') {
-  //   return {house} // must figure out how to exclude other houses. 1/2 done
-  // }
-  console.log(`${firstName} ${lastName} ${house}`) 
+hogwarts.forEach((gryffindorStudents) => { //loop through the array hogwarts
+  let {house: gryffStudents} = gryffindorStudents; // destructure / pull out the house element from the objects and assign it to a var name 
+  if  (gryffStudents == 'Gryffindor') { //if condition to check which students
+  console.log(`${gryffindorStudents.firstName} ${gryffindorStudents.lastName} live at ${gryffStudents}`) 
 
-});
+}});
 
+// - In `exercise-2.js` write a program that will take the `hogwarts` array as input and display the names of teachers who have pets.
+// - Use array destructuring to extract the values you need out of the array.
+
+hogwarts.forEach((teachers) => {
+  let {occupation: job, pet} = teachers;
+  if (job === "Teacher" && pet != null )
+  console.log(`${teachers.firstName} ${teachers.lastName} owns ${teachers.pet}`)
+})
 
 
 

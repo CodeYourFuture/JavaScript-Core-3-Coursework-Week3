@@ -10,12 +10,21 @@ let order = [
 // loop through the array
 //hand pick each item to display
 // add the total?
-console.log(`QTY  ITEM        PICE`);
-order.forEach((item) => {
-  let {quantity, itemName, unitPrice} = item;
+console.log(`QTY    ITEM        PRICE`);
+// order.forEach((item) => {
+//   let {quantity, itemName, unitPrice} = item;
   
-  console.log(`${quantity}  ${itemName}    ${unitPrice}`)
-} 
-)
+//   console.log(`${quantity}  ${itemName}    ${unitPrice}`);
+//   break;
+//   console.log(`TOTAL: ${quantity * unitPrice} `)
+// } 
+// )
+
+for (let index = 0; index < order.length; index++) {
+  const {quantity, itemName, unitPrice} = order[index];
+  console.log(`${quantity}  ${itemName}    ${unitPrice * quantity}`);
+  
+  //console.log(`TOTAL: ${unitPrice * index} `);
+}
 
 // console.log(`TOTAL: ${quantity * unitPrice} `) // where to add total? how to close loop?
